@@ -59,11 +59,11 @@ class Employee
   attr_reader :first_name, :salary, :active
   attr_accessor :last_name
 
-  def initialize(input_hash)
-    @first_name = input_hash[:first_name]
-    @last_name = input_hash[:last_name]
-    @salary = input_hash[:salary]
-    @active = input_hash[:active]
+  def initialize(input_options)
+    @first_name = input_options[:first_name]
+    @last_name = input_options[:last_name]
+    @salary = input_options[:salary]
+    @active = input_options[:active]
   end
 
   def print_info
@@ -85,8 +85,8 @@ employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 7000
 # p employee1.last_name
 
 # p "before the raise"
-p employee1.print_info
-p employee2.print_info
+# p employee1.print_info
+# p employee2.print_info
 
 # employee1.give_annual_raise
 
