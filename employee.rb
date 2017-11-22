@@ -51,10 +51,55 @@
 class Employee
   def initialize(input_first_name, input_last_name, input_salary, input_active)
     @first_name = input_first_name
-
-    p 'i am still running'
+    @last_name = input_last_name
+    @salary = input_salary
+    @active = input_active
   end
+
+  def first_name
+    @first_name
+  end
+
+  def last_name
+    @last_name
+  end
+
+  def salary
+    @salary
+  end
+
+  def active
+    @active
+  end
+
+  def last_name=(new_last_name)
+    @last_name = new_last_name
+  end
+
+
+  def print_info
+    "#{first_name} #{last_name} makes $#{salary} per year"
+  end
+
+  def give_annual_raise
+    @salary = @salary * 1.05
+  end
+
 end
 
-employee1 = Employee.new("Majora", "Carter", 80000, true)
 
+
+employee1 = Employee.new("Majora", "Carter", 80000, true)
+employee2 = Employee.new("Danilo", "Campos", 70000, false)
+
+# employee1.last_name = "Campos"
+# p employee1
+
+# p "before the raise"
+p employee1.print_info
+p employee2.print_info
+
+# employee1.give_annual_raise
+
+# p "after the raise"
+# p employee1.print_info
