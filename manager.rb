@@ -37,15 +37,17 @@ employee1 = Employee.new({:first_name => "Majora", :last_name => "Carter", :sala
 
 # employee1.send_report
 
-# employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: false)
+employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: false)
 
 
 
-manager1 = Manager.new({:first_name => "Bill", :last_name => "BoBaginns", :salary => 800000, :active => true})
+manager1 = Manager.new({:first_name => "Bill", :last_name => "BoBaginns", :salary => 800000, :active => true, :employees => [employee1, employee2]})
 
-manager2 = Manager.new(first_name: "Peter", last_name: "Jang", salary: 700000, active: false)
+p manager1.employees
+
+# manager2 = Manager.new(first_name: "Peter", last_name: "Jang", salary: 700000, active: false)
 
 
-manager1.print_info
+# manager1.print_info
 
-manager1.send_report
+# manager1.send_report
