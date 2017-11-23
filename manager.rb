@@ -10,7 +10,7 @@ class Employee
   end
 
   def print_info
-    p "#{first_name} #{last_name} makes $#{salary} per year wahooooo"
+    p "#{first_name} #{last_name} makes $#{salary} per year wahoooooo"
   end
 
   def give_annual_raise
@@ -24,6 +24,11 @@ end
 # A manager, does EVERYTHING an employee does but also can send reports
 
 class Manager < Employee
+  def initialize(input_options)
+    super
+    @employees = input_options[:employees]
+  end
+
   def send_report
     p "about to send the report..."
     # write some code here
@@ -39,11 +44,9 @@ employee1 = Employee.new({:first_name => "Majora", :last_name => "Carter", :sala
 
 employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: false)
 
-
-
 manager1 = Manager.new({:first_name => "Bill", :last_name => "BoBaginns", :salary => 800000, :active => true, :employees => [employee1, employee2]})
 
-p manager1.employees
+p manager1
 
 # manager2 = Manager.new(first_name: "Peter", last_name: "Jang", salary: 700000, active: false)
 
@@ -51,3 +54,10 @@ p manager1.employees
 # manager1.print_info
 
 # manager1.send_report
+
+
+
+
+
+
+
