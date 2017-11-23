@@ -45,18 +45,9 @@
 
 # p "#{employee1['first_name']} #{employee1['last_name']} makes $#{employee1['salary']} per year"
 
-# snake_case
-# first_name
-# camelCase
-# firstName
-# kebab-case
-# first-name
-# UpperCamelCase
-# FirstName
-
-# classes
 class Employee
   attr_reader :first_name, :salary, :active
+  attr_writer :active
   attr_accessor :last_name
 
   def initialize(input_options)
@@ -67,28 +58,10 @@ class Employee
   end
 
   def print_info
-    "#{first_name} #{last_name} makes $#{salary} per year"
+    p "#{first_name} #{last_name} makes $#{salary} per year wahoooooo"
   end
 
   def give_annual_raise
-    @salary = @salary * 1.05
+    @salary *= 1.05
   end
 end
-
-employee1 = Employee.new({:first_name => "Majora", :last_name => "Carter", :salary => 80000, :active => true})
-
-employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: false)
-
-
-# p employee1.last_name
-# employee1.last_name = "Campos"
-# p employee1.last_name
-
-# p "before the raise"
-# p employee1.print_info
-# p employee2.print_info
-
-# employee1.give_annual_raise
-
-# p "after the raise"
-# p employee1.print_info
